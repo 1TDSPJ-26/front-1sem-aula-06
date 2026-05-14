@@ -153,6 +153,7 @@
 
 // }
 
+
 // console.log(usuarios);
 
 
@@ -261,10 +262,21 @@ const usuarios = [
   }
 ];
 
-// usuarios.forEach((u, i, array)=>{
-//     console.log(i,u.nome)
-// });
+// usuarios.forEach((u,i,array)=>{
+//     console.log(i,u.nome);
+// } );
+
 
 //Capturar o botão de entrar para iniciar a tarefa de login
 const botaoEntrar = document.getElementById("btnEntrar");
-//Atrelando um evento ao botão de entrar para iniciar a tarefa de validação do login
+//Atrelando um evento ao botão de entrar para iniciar a tarefa de validação do login.
+botaoEntrar.addEventListener("click", ()=>{
+
+    //Capturar os campos de email e senha e imprimir seus dados:
+    const email = document.querySelector("#idEmail");
+    const senha = document.querySelector("#idSenha");
+    console.log(email.value);
+    console.log(senha.value);
+
+});
+
