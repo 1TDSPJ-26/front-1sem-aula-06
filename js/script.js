@@ -238,5 +238,8 @@ for(let x = 0; x < frase.length; x++){
     const btnEntrar = document.getElementById("btn-entrar");
     //atrelando um evento ao botão de entrar para iniciar a tarefa de validação do login
     btnEntrar.addEventListener("click", ()=>{
-
+        //capturando os dados dos campos de email e senha
+        const emailInput = document.querySelector("#idEmail");
+        const senhaInput = document.querySelector("#idSenha");
+        console.log(emailInput.value, senhaInput.value);
     });
