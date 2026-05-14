@@ -267,3 +267,9 @@ const usuarios = [
 // } );
 
 
+//Capturar o botão de entrar para iniciar a tarefa de login
+const botaoEntrar = document.getElementById("btnEntrar");
+//Atrelando um evento ao botão de entrar para iniciar a tarefa de validação do login.
+botaoEntrar.addEventListener("click", ()=>{
+    
+});
