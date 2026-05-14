@@ -309,3 +309,8 @@ botaoEntrar.addEventListener("click", (e)=>{
     }
 });
 
+//Pra casa
+//INCREMENTAR A VALIDAÇÃO COM UMA MENSAGEM TEMPORIZADORA NA TELA:
+// Utilize a função setInterval().
+// Onde o usuário recebe a mensagem de Sucesso e que vai redirecionar em 5 segundos, com um contador rodando.
+// Utilize a função window.location.href = destino para redirecionar usuário!
