@@ -153,6 +153,7 @@
 
 // }
 
+
 // console.log(usuarios);
 
 
@@ -174,19 +175,18 @@
 //     return resultado;
 // }
 
-// // console.log(login(7,6,8));
+// console.log(login(7,6,8));
+
 
 // const botaoEntrar = document.getElementById("btnEntrar");
 
-// botaoEntrar.addEventListener("click", function(){
-//     console.log(this);
-// });
+// // botaoEntrar.addEventListener("click", function(){
+// //     console.log(this);
+// // });
 
 // botaoEntrar.addEventListener("click", ()=>{
 //     console.log(this);
 // });
-
-
 
 //Lista de usuários : PSEUDO BANCO
 const usuarios = [
@@ -263,10 +263,20 @@ const usuarios = [
 ];
 
 // usuarios.forEach((u,i,array)=>{
-//     console.log(i,u.email);
-// });
+//     console.log(i,u.nome);
+// } );
 
-//Capturar o botao de entrar para iniciar a tarefa de login
+
+//Capturar o botão de entrar para iniciar a tarefa de login
 const botaoEntrar = document.getElementById("btnEntrar");
-//Atrelando um evento ao botao de entrar para iniciar a tarefa de validação do login.
-botaoEntrar.addEventListener("click", ()=>{});
+//Atrelando um evento ao botão de entrar para iniciar a tarefa de validação do login.
+botaoEntrar.addEventListener("click", ()=>{
+
+    //Capturar os campos de email e senha e imprimir seus dados:
+    const email = document.querySelector("#idEmail");
+    const senha = document.querySelector("#idSenha")
+
+    console.log(email.value);
+    console.log(senha.value)
+});
+
