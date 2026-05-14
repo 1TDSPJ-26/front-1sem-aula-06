@@ -309,3 +309,9 @@ botaoEntrar.addEventListener("click", (e)=>{
     }
 });
 
+//Pra casa
+// Incrementar a validação com uma mensagem temporizadora na tela:
+// Utilize a função setInterval().
+// Onde o usuário recebe a mensagem de Sucesso e que vai ser redirecionado em 5 segundos,
+// com um contador rodando.
+// Utilize a função window.location.href = destino para redirecionar o usuário!
