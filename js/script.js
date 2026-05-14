@@ -277,17 +277,15 @@
 // } );    
 
 //capturar o botão de entrar para iniciar a tarefa de login
-const botaoEntrar = document.getElementById("btnEntrar")
+const botaoEntrar = document.getElementById("btnEntrar");
 //atrelando um evento ao botão de entrar para iniciar a tarefa de validação do login 
 botaoEntrar.addEventListener("click", (e)=>{
 
     //pegando o evento disparador e controlando o comportamento do alvo(form) para não executar por enquanto este mesmo comportamento padrão através da função prevent default
-    e.preventDefault
+    e.preventDefault();
     //capturar os campos de email e senha e imprimir seus dados:
-    const email = document.querySelector("idEmail");
-    const senha = document.querySelector("idSenha");
-    console.log(email.value)
-    console.log(senha.value)
+    const email = document.querySelector("#idEmail");
+    const senha = document.querySelector("#idSenha");
 
     //vamos guardar os dados oriundos do form em um objeto
 
@@ -298,25 +296,25 @@ botaoEntrar.addEventListener("click", (e)=>{
 
     //iniciando a validação de fato, colocando a lista de usuários contra o objeto dadosForm
 
-    let isValid = false
+    let isValid = false;
     if(usuarios.length > 0){
         
         for (const u of usuarios) {
-            if(usuarios.email === dadosForm.email && usuarios.senha === dadosForm.senha){
-                alert("Login realizado com sucesso!")
+            if(u.email === dadosForm.email && u.senha === dadosForm.senha){
+                alert("Login realizado com sucesso!");
                 isValid = true;
                 break;
             }
         }
         
     }else{
-        alert("Ocorreu um problema com as informações do sistema!")
+        alert("Ocorreu um problema com as informações do sistema!");
     }
 
-    if (isValid) {
-        alert("Email ou senha incorretos.")
+    if (!isValid) {
+        alert("Email ou senha incorretos.");
     }
-})
+});
 
 //pra casa ===== incrementar a validação com uma mensagem temporizadora na tela:
 // utilize a função setInterval()       onde o usuário recebe a mensagem de sucesso e que vai ser redirecionado em 5 segundos, com um contador rodando
