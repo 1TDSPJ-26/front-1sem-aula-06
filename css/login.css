@@ -6,3 +6,15 @@ input:valid:not(:placeholder-shown){
 input:invalid:not(:placeholder-shown){
     border: 2px solid red;
 }
+
+/* input{
+    background-color:  #d29292;
+} */
+
+/* input[type="email"], input[type="password"]{
+    background-color:  #d29292;
+} */
+
+/* #idEmail, #idSenha{
+    background-color:  #d29292;
+} */

@@ -276,13 +276,15 @@
 //     console.log(i,u.nome);
 // } );    
 
-//capturar o botão de entrar para iniciar a tarefa dde login
+//capturar o botão de entrar para iniciar a tarefa de login
 const botaoEntrar = document.getElementById("btnEntrar")
-//atrelando um evento ao botão de entrar para iniciar 
-botaoEntrar.addEventListener("click", function(){
-    console.log(this);
+//atrelando um evento ao botão de entrar para iniciar a tarefa de validação do login 
+botaoEntrar.addEventListener("click", ()=>{
+
+    //capturar os campos de email e senha e imprimir seus dados:
+    const email = document.querySelector("idEmail");
+    const senha = document.querySelector("idSenha");
+    console.log(email.value)
+    console.log(senha.value)
 })
 
-botaoEntrar.addEventListener("click", ()=>{
-    console.log(this);
-})
