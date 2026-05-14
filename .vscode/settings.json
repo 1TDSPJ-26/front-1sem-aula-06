@@ -1,3 +1,10 @@
 {
-    "liveServer.settings.multiRootWorkspaceName": "front-1sem-aula-01"
+    "liveServer.settings.multiRootWorkspaceName": "front-1sem-aula-06",
+    "liveServer.settings.root": "/",
+    "liveServer.settings.wait": 100,
+    "liveServer.settings.fullReload": true,
+    "liveServer.settings.ignoreFiles": [
+        "**/.git/**",
+        "**/.vscode/**"
+    ]
 }
