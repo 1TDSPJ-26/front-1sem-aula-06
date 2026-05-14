@@ -309,3 +309,10 @@ botaoEntrar.addEventListener("click", (e)=>{
         alert("Email ou senha incorretos!")
     }
 });
+
+//Pra casa
+// // incrementar a validação com uma mensagem temporizadora na tela:
+// utilize a função setInterval().
+// Onde o usuário recebe a mensagem de Suceso e que vai ser redirecionado em 5 segundos.
+// como um contador rodando.
+// Utilize a função window.location.href = destino para redirecionar o usuário!
