@@ -278,5 +278,13 @@ const usuarios = [
 
 //Capturar o botão de entrar para iniciar a tarefa de login
 const botaoEntrar = document.getElementById("btnEntrar");
-// Atrelando um evento ao botao de entrar para realizar a tarefa de login
-botaoEntrar.addEventListener("click", ()=>{});
+//Atrelando um evento ao botão de entrar para iniciar a tarefa de validação do login.
+botaoEntrar.addEventListener("click", ()=>{
+
+    //Capturar os campos de email e senha e imprimir seus dados:
+    const email = document.querySelector("#idEmail");
+    const senha = document.querySelector("#idSenha");
+    console.log(email.value);
+    console.log(senha.value);
+
+});
