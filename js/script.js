@@ -279,12 +279,42 @@
 //capturar o botão de entrar para iniciar a tarefa de login
 const botaoEntrar = document.getElementById("btnEntrar")
 //atrelando um evento ao botão de entrar para iniciar a tarefa de validação do login 
-botaoEntrar.addEventListener("click", ()=>{
+botaoEntrar.addEventListener("click", (e)=>{
 
+    //pegando o evento disparador e controlando o comportamento do alvo(form) para não executar por enquanto este mesmo comportamento padrão através da função prevent default
+    e.preventDefault
     //capturar os campos de email e senha e imprimir seus dados:
     const email = document.querySelector("idEmail");
     const senha = document.querySelector("idSenha");
     console.log(email.value)
     console.log(senha.value)
+
+    //vamos guardar os dados oriundos do form em um objeto
+
+    const dadosForm = {
+        email: email.value,
+        senha: senha.value
+    }
+
+    //iniciando a validação de fato, colocando a lista de usuários contra o objeto dadosForm
+
+    let isValid = false
+    if(usuarios.length > 0){
+        
+        for (const u of usuarios) {
+            if(usuarios.email === dadosForm.email && usuarios.senha === dadosForm.senha){
+                alert("Login realizado com sucesso!")
+                isValid = true;
+                break;
+            }
+        }
+        
+    }else{
+        alert("Ocorreu um problema com as informações do sistema!")
+    }
+
+    if (isValid) {
+        alert("Email ou senha incorretos.")
+    }
 })
 
