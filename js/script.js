@@ -146,3 +146,143 @@
 
 //Recuperar os dados dos campos do FORM e armazenar em um objeto e imprimir eles assim que o botão Entrar for clicado!!
 //Eu já fiz
+
+//conhecedo as strings
+//o que são strings?
+
+
+// let frase = "Estou seguro, agora, utilizo um anti-virus pago!";
+// console.log(frase);
+
+// //contando os caracteres da string
+// console.log(frase.length);
+// // console.log(frase[4]);
+
+// //realizando a leitura dina,ica de uma string
+// for (let x = 0; x < frase.length; x++) {
+//     console.log(frase[x])
+
+//     if(frase[x] == "e"){
+//         console.log(`A letra e está na posição ${x} da frase.`);
+//     }
+// }
+
+//console.log(usuarios) function tradicional
+// function login(...args){
+//     //contexto da função
+//     let resultado = "";
+//     resultado = args [0] + args[1] + args[2];
+//     console.log(resultado);
+//     return resultado;
+// }
+// console.log(login(7,6,8));
+
+//ArrowFunction
+// const login = (...args)=>{
+//     //contexto da função
+//     let resultado = "";
+//     resultado = args [0] + args[1] + args[2];
+//     console.log(resultado);
+//     return resultado;
+// }
+// console.log(login(7,6,8));
+
+// const botaoEntrar = document.getElementById("btnEntrar")
+
+// botaoEntrar.addEventListener("click", function(){
+//     console.log(this);
+// })
+
+// botaoEntrar.addEventListener("click", ()=>{
+//     console.log(this);
+// })
+//principal diferença entre estas funç~çoes é o acesso ao objeto this
+
+//lista de usuarios
+ const usuarios = [
+  {
+    email: "zarak.vultos@exemplo.com",
+    senha: "12345",
+    nome: "Zarak dos Vultos",
+    idade: 42,
+    avatar: "https://placehold.co/100x100/e6e6e6/444444.png?text=usu%C3%A1rio&font=roboto"
+  },
+  {
+    email: "elara.astral@exemplo.com",
+    senha: "12345",
+    nome: "Elara Galáxia Astral",
+    idade: 27,
+    avatar: "https://placehold.co/100x100/e6e6e6/444444.png?text=usu%C3%A1rio&font=roboto"
+  },
+  {
+    email: "mordecai.bruma@exemplo.com",
+    senha: "12345",
+    nome: "Mordecai da Bruma",
+    idade: 51,
+    avatar: "https://placehold.co/100x100/e6e6e6/444444.png?text=usu%C3%A1rio&font=roboto"
+  },
+  {
+    email: "thallos.ferro@exemplo.com",
+    senha: "12345",
+    nome: "Thallos de Ferro",
+    idade: 35,
+    avatar: "https://placehold.co/100x100/e6e6e6/444444.png?text=usu%C3%A1rio&font=roboto"
+  },
+  {
+    email: "lyra.eco@exemplo.com",
+    senha: "12345",
+    nome: "Lyra Silvestre Eco",
+    idade: 22,
+    avatar: "https://placehold.co/100x100/e6e6e6/444444.png?text=usu%C3%A1rio&font=roboto"
+  },
+  {
+    email: "boros.fenda@exemplo.com",
+    senha: "12345",
+    nome: "Boros da Fenda Profunda",
+    idade: 64,
+    avatar: "https://placehold.co/100x100/e6e6e6/444444.png?text=usu%C3%A1rio&font=roboto"
+  },
+  {
+    email: "vaelin.nimbus@exemplo.com",
+    senha: "12345",
+    nome: "Vaelin Nimbus",
+    idade: 30,
+    avatar: "https://placehold.co/100x100/e6e6e6/444444.png?text=usu%C3%A1rio&font=roboto"
+  },
+  {
+    email: "selene.quartzo@exemplo.com",
+    senha: "12345",
+    nome: "Selene de Quartzo",
+    idade: 29,
+    avatar: "https://placehold.co/100x100/e6e6e6/444444.png?text=usu%C3%A1rio&font=roboto"
+  },
+  {
+    email: "kaelthas.sol@exemplo.com",
+    senha: "12345",
+    nome: "Kaelthas Brilho do Sol",
+    idade: 47,
+    avatar: "https://placehold.co/100x100/e6e6e6/444444.png?text=usu%C3%A1rio&font=roboto"
+  },
+  {
+    email: "joric.martelo@exemplo.com",
+    senha: "12345",
+    nome: "Joric Martelo de Pedra",
+    idade: 38,
+    avatar: "https://placehold.co/100x100/e6e6e6/444444.png?text=usu%C3%A1rio&font=roboto"
+  }
+];
+
+// usuarios.forEach((u,i,array)=>{
+//     console.log(i,u.nome);
+// } );    
+
+//capturar o botão de entrar para iniciar a tarefa dde login
+const botaoEntrar = document.getElementById("btnEntrar")
+//atrelando um evento ao botão de entrar para iniciar 
+botaoEntrar.addEventListener("click", function(){
+    console.log(this);
+})
+
+botaoEntrar.addEventListener("click", ()=>{
+    console.log(this);
+})
