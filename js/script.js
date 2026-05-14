@@ -133,3 +133,150 @@
 // imgAvatar.alt = usuario.nome;
 
 //Recuperar os dados dos campos do FORM e armazenar em um objeto e imprimir eles assim que o botão Entrar for clicado!!
+
+// conhecendo as strings
+// o que sao strings? São cadeias de caracteres, ou seja, textos. Elas são usadas para armazenar e manipular texto em JavaScript. As strings podem ser criadas usando aspas simples (' '), aspas duplas (" ") ou crase (` `) para template literals.
+
+//let nome = "João Vitor";
+//let sobrenome = 'C. de Lima';
+//let frase = `Meu nome é ${nome} ${sobrenome}`;
+
+//console.log(nome);
+//console.log(sobrenome);
+//console.log(frase);
+
+//Contando os caractéres da string.
+//console.log(frase.length);
+
+//Realizando a leitura dinâmica de uma string.
+//for (let x = 0; x < frase.length; x++) {
+    
+  //  if(frase[x].toLowerCase() === "m"){
+    //    console.log(`A letra "M" está na posição ${x} da frase.`);
+    //}
+
+//}
+
+
+
+//console.log(usuarios);
+
+//function login(...args){
+    //Contexto da função
+  //  let resultado = "";
+    //resultado = args[0] + args[1] + args[2];
+    //console.log(resultado);
+    //return resultado;
+//}
+//console.log(login(7,6,8));
+
+// const login = (...args)=>{
+//     //Contexto da função
+//     let resultado = "";
+//     resultado = args[0] + args[1] + args[2];
+//     console.log(resultado);
+//     return resultado;
+// }
+
+// console.log(login(7,6,8));
+
+
+//const botaoEntrar = document.getElementById("btnEntrar");
+
+// botaoEntrar.addEventListener("click", function(){
+//     console.log(this);
+// });
+
+//botaoEntrar.addEventListener("click", ()=>{
+    // console.log(this);
+//});
+
+//Lista de usuários : PSEUDO BANCO
+const usuarios = [
+  {
+    email: "zarak.vultos@exemplo.com",
+    senha: "12345",
+    nome: "Zarak dos Vultos",
+    idade: 42,
+    avatar: "https://placehold.co/100x100/e6e6e6/444444.png?text=usu%C3%A1rio&font=roboto"
+  },
+  { 
+    email: "email@example.com",
+    senha: "123456",
+    nome: "João Vitor",
+    idade: 19,
+    avatar:"https://placehold.co/100x100/e6e6e6/444444.png?text=usu%C3%A1rio&font=roboto"
+  },
+  {
+    email: "elara.astral@exemplo.com",
+    senha: "12345",
+    nome: "Elara Galáxia Astral",
+    idade: 27,
+    avatar: "https://placehold.co/100x100/e6e6e6/444444.png?text=usu%C3%A1rio&font=roboto"
+  },
+  {
+    email: "mordecai.bruma@exemplo.com",
+    senha: "12345",
+    nome: "Mordecai da Bruma",
+    idade: 51,
+    avatar: "https://placehold.co/100x100/e6e6e6/444444.png?text=usu%C3%A1rio&font=roboto"
+  },
+  {
+    email: "thallos.ferro@exemplo.com",
+    senha: "12345",
+    nome: "Thallos de Ferro",
+    idade: 35,
+    avatar: "https://placehold.co/100x100/e6e6e6/444444.png?text=usu%C3%A1rio&font=roboto"
+  },
+  {
+    email: "lyra.eco@exemplo.com",
+    senha: "12345",
+    nome: "Lyra Silvestre Eco",
+    idade: 22,
+    avatar: "https://placehold.co/100x100/e6e6e6/444444.png?text=usu%C3%A1rio&font=roboto"
+  },
+  {
+    email: "boros.fenda@exemplo.com",
+    senha: "12345",
+    nome: "Boros da Fenda Profunda",
+    idade: 64,
+    avatar: "https://placehold.co/100x100/e6e6e6/444444.png?text=usu%C3%A1rio&font=roboto"
+  },
+  {
+    email: "vaelin.nimbus@exemplo.com",
+    senha: "12345",
+    nome: "Vaelin Nimbus",
+    idade: 30,
+    avatar: "https://placehold.co/100x100/e6e6e6/444444.png?text=usu%C3%A1rio&font=roboto"
+  },
+  {
+    email: "selene.quartzo@exemplo.com",
+    senha: "12345",
+    nome: "Selene de Quartzo",
+    idade: 29,
+    avatar: "https://placehold.co/100x100/e6e6e6/444444.png?text=usu%C3%A1rio&font=roboto"
+  },
+  {
+    email: "kaelthas.sol@exemplo.com",
+    senha: "12345",
+    nome: "Kaelthas Brilho do Sol",
+    idade: 47,
+    avatar: "https://placehold.co/100x100/e6e6e6/444444.png?text=usu%C3%A1rio&font=roboto"
+  },
+  {
+    email: "joric.martelo@exemplo.com",
+    senha: "12345",
+    nome: "Joric Martelo de Pedra",
+    idade: 38,
+    avatar: "https://placehold.co/100x100/e6e6e6/444444.png?text=usu%C3%A1rio&font=roboto"
+  }
+];
+
+//usuarios.forEach((u,i,array)=>{
+    //console.log(i,u.nome)
+//} );
+
+//Capturar o botão de entrar para iniciar a tarefa de login
+const botaoEntrar = document.getElementById("btnEntrar");
+// Atrelando um evento ao botao de entrar para realizar a tarefa de login
+botaoEntrar.addEventListener("click", ()=>{});
