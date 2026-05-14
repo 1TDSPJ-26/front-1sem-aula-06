@@ -135,7 +135,7 @@
 
 //Recuperar os dados dos campos do FORM e armazenar em um objeto e imprimir eles assim que o botão Entrar for clicado!!
 
-//Conhecendo as strings
+  //Conhecendo as strings
   //O que são STRINGS?
 
 // let frase = "Estou seguro, agora, utilizo um anti-virus pago!!";
@@ -154,7 +154,8 @@
 // }
 
 
-//console.log(usuarios);
+// console.log(usuarios);
+
 
 // function login(...args){
 //     //Contexto da função
@@ -174,7 +175,7 @@
 //     return resultado;
 // }
 
-// // console.log(login(7,6,8));
+// console.log(login(7,6,8));
 
 
 // const botaoEntrar = document.getElementById("btnEntrar");
@@ -269,4 +270,12 @@ const usuarios = [
 //Capturar o botão de entrar para iniciar a tarefa de login
 const botaoEntrar = document.getElementById("btnEntrar");
 //Atrelando um evento ao botão de entrar para iniciar a tarefa de validação do login.
-botaoEntrar.addEventListener("click", ()=>{});
+botaoEntrar.addEventListener("click", ()=>{
+
+    //Capturar os campos de email e senha e imprimir seus dados:
+    const email = document.querySelector("#idEmail");
+    const senha = document.querySelector("#idSenha");
+    console.log(email.value);
+    console.log(senha.value);
+
+});
