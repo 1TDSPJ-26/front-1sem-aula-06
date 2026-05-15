@@ -279,6 +279,7 @@ botaoEntrar.addEventListener("click", (e)=>{
     //Capturar os campos de email e senha e imprimir seus dados:
     const email = document.querySelector("#idEmail");
     const senha = document.querySelector("#idSenha");
+    const mensagemLogin = document.querySelector("#mensagemLogin");
     
     //Vamos guardar os dados oriundos do form em um objeto:
     const dadosForm = {
@@ -289,14 +290,25 @@ botaoEntrar.addEventListener("click", (e)=>{
     //Iniciando a validação de fato, colocando a lista de usuários contra o objeto dadosForm:
 
     let isValid = false;
-
+    
     if(usuarios.length > 0){
+      
+      for (const u of usuarios) {
+        if(u.email === dadosForm.email && u.senha === dadosForm.senha){
+          isValid = true;
+          let tempo = 5;
+          mensagemLogin.textContent = `Login realizado com sucesso! Redirecionando em ${tempo}`;
 
-        for (const u of usuarios) {
-            if(u.email === dadosForm.email && u.senha === dadosForm.senha){
-                alert("Login realizado com sucesso!");
-                isValid = true;
-                break
+          const intervalo = setInterval(() => {
+            tempo--;
+            mensagemLogin.textContent = `Login realizado com sucesso! Redirecionando em ${tempo}`;
+
+            if (tempo <= 0){
+              clearInterval(intervalo);
+              window.location.href = "./index.html";
+            }
+          }, 1000);
+                  break
             }  
             
         }
@@ -305,8 +317,8 @@ botaoEntrar.addEventListener("click", (e)=>{
         alert("Ocorreu um problema com as informações do sistema!");
     }
 
-    if (isValid) {
-        alert("Email ou senha incorretos!")
+    if (!isValid) {
+        mensagemLogin.textContent = "Email ou senha incorretos!";
     }
 });
 
