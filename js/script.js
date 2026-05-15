@@ -283,20 +283,52 @@ botaoEntrar.addEventListener("click", (e)=>{
     console.log(email.value);
     console.log(senha.value);
 
-    //Vamos guardar os dados oriundos do form em um objeto:
+     //Vamos guardar os dados oriundos do form em um objeto:
     const dadosForm = {
         email: email.value,
         senha: senha.value
     }
+
 //Iniciando a validação de fato, colocando a lista de usuários contra o objeto dadosForm:
 
-let isValid = false;
+    let isValid = false;
 
     if(usuarios.length > 0){
 
         for (const u of usuarios) {
             if(u.email === dadosForm.email && u.senha === dadosForm.senha){
-                alert("Login realizado com sucesso!");
+               
+                //Capturar a janela de dialog:
+                const modal = document.querySelector("#meuModal");
+                modal.showModal();
+
+                //Capturando o botao do dialog para fechar a janela.
+                const botaoModal = document.querySelector("#btnFecharModal");
+                //Atrelar um evento para o botão de fechamento encerrar a janela de dialog.
+                botaoModal.addEventListener("click", ()=>{
+                  //utilizando o elemento dialog já capturado para encerrar.
+                  modal.close();
+                });
+
+                //TIMER COM INJEÇÃO DA MSG DE SUCESSO
+                //Capturar o elemento que apresenta a msg no dialog
+                const divMsg = document.querySelector("#msg");
+
+                //Adicionando uma nova tag a esta div capturada com a propriedade innerHTML.
+
+                divMsg.innerHTML = "<p>Login realizado com SUCESSO!</p><p>Você será redirecionado em 5 segundos...</p>";
+
+                let contador = 5;
+
+                const intervalo = setInterval( ()=>{
+                    contador--;
+                    divMsg.innerHTML = `<p>Login realizado com SUCESSO!</p><p>Você será redirecionado em ${contador} segundos...</p>`;
+
+                    if(contador === 0){
+                      clearInterval(intervalo);
+                    }
+                }, 1000 );
+                
                 isValid = true;
                 break;
             }
@@ -309,9 +341,8 @@ let isValid = false;
     if (!isValid) {
         alert("Email ou senha incorretos!");
     }
-
-
 });
+
 //Pra casa
 // Incrementar a validação com uma mensagem temporizadora na tela:
 // Utilize a função setInterval().
